@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/red"
+        android:indeterminate="true"/>
+    <TextView
+        android:id="@+id/conect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wait... Data is Fetchig"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/progressBar1"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-smallcaps" />
+
+    <TextView
+        android:id="@+id/error"
+        android:visibility="invisible"
+        android:textColor="@color/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:text="Check Your Connection"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-smallcaps"/>
+
+<!--
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/amaranth_bold"
+        android:text="NEWS"
+        android:textSize="35sp"
+        android:visibility="invisible" />
+-->
+<EditText
+    android:id="@+id/text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="10dp"
+    android:fontFamily="@font/amaranth_bold"
+    android:hint="NEWS"
+    android:textSize="35sp"
+    android:visibility="invisible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text" />
+
+
+</RelativeLayout>
